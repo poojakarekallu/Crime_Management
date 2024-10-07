@@ -48,28 +48,17 @@ loops
                  2. Average of all Integers
                  3. Maximum Integer from all
                  4. Minimum Integer from all
-sum=0
-count=0
-max_int = None
-min_int = None
+
+numbers = []
 while True:
-    num = input("Enter an integer: ")
-    if(num=='stop'):
+    input = input("Enter a number or type : ")
+    if input == "stop":
         break
-    if num.isdigit():
-        num=int(num)
-        sum=sum+num
-        count+=1
-        if max_int is None or num > max_int:
-            max_int = num
-        
-        if min_int is None or num < min_int:
-            min_int = num
-        
-print("sum: ",sum)
-print("Average is :" ,sum/count)
-print("maximum integer:",max_int)
-print("maximum integer:",min_int)
+    numbers.append(int(input))
+    print("Sum of all integers: ", sum(numbers))
+    print("Average of all integers: ", sum(numbers)/len(numbers))
+    print("Maximum Integer: ", max(numbers))
+    print("Minimum Integer: ", min(numbers))
 
 2. Accept a String from User an do the following :
                     1. Find the Length
